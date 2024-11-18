@@ -57,3 +57,8 @@ func main() {
 ```
 
 The package named `main` is a special case because in a codebase with a `package main` files indicates it contains code which can be run or build for an executable application. It is not necessary that `main.go` should contain the function `main()` but it a convention.  
+
+
+## Exported names
+
+A rule of thumb for exported names from a package is the first letter of the name is in uppercase for example `math.Pi`
