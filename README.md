@@ -94,7 +94,7 @@ func sum(a,b int) int {
 
 > NOTE: main function does not take any argument
 
-Functions can multiple return values in golang
+Functions can return multiple return values as shown below
 
 ```go
 package main
@@ -111,7 +111,7 @@ func main() {
 }
 ```
 
-The following code is an example of "naked" return in golang where the return statement has no arguments and the two named variables values are returned
+The following code is an example of "naked" return where the return statement has no arguments and the two variables are defined on top of the function type syntax
 
 ```go
 package main
@@ -119,13 +119,64 @@ package main
 import "fmt"
 
 func split(sum int) (x, y int) {
-	x = sum * 4 / 9
-	y = sum - x
-	return
+  x = sum * 4 / 9
+  y = sum - x
+  return
 }
 
 func main() {
-	var a, b int=split(17)
-	fmt.Println(a,b)
+  var a, b int=split(17)
+  fmt.Println(a,b)
 }
+```
+
+## Variables
+
+With variable statement we can declare list of variables followed by the type similar to function arguments.
+
+Variables can be scoped at package or function level
+
+```go
+package main
+
+var c, java, python bool
+
+func main() {
+  var i int
+  fmt.Println(i, c, java, python) // 0 false false false
+}
+```
+
+Variables can include initializers for each variable declared
+
+```go
+package main
+
+import "fmt"
+
+var i, j int = 1, 2
+
+func main() {
+  var c, python, java = true, false, "no!"
+  fmt.Println(i, j, c, python, java) // 1 2 true false no!
+}
+
+```
+
+Variables can be declared without the `var` keyword (with `:=` syntax) which implicitly assigns the type based on the value defined during declaration
+
+```go
+package main
+
+import "fmt"
+
+a := 3 // this is not valid
+
+func main() {
+ var i,j int=1,2
+ k := 3
+ c, python, java := true, false, "no!"
+ fmt.Println(i,j,k,c,python,java)
+}
+
 ```
