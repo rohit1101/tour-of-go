@@ -61,4 +61,4 @@ The package named `main` is a special case because in a codebase with a `package
 
 ## Exported names
 
-A rule of thumb for exported names from a package is the first letter of the name is in uppercase for example `math.Pi`
+A rule of thumb for exported names from a package is the first letter of the name is in uppercase for example `math.Pi`, but names without uppercase are private within the package and cannot be exported by another file.
