@@ -62,3 +62,35 @@ The package named `main` is a special case because in a codebase with a `package
 ## Exported names
 
 A rule of thumb for exported names from a package is the first letter of the name is in uppercase for example `math.Pi`, but names without uppercase are private within the package and cannot be exported by another file.
+
+## Functions
+
+In golang, functions can take zero or more arugments
+
+For example:
+
+```go
+package main
+
+import "fmt"
+
+func add(a int, b int) int {      
+  return a+b
+}
+
+func main() {
+  fmt.Println(add(2+3))
+}
+
+```
+
+The below function is same as the above function declaration because the only difference is we make use of the shorthand of using the only one type for function parameters if they share the same type.
+
+```go
+func sum(a,b int) int {
+  return a+b
+}
+```
+
+> NOTE: main function does not take any argument
+
