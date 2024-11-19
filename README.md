@@ -94,3 +94,38 @@ func sum(a,b int) int {
 
 > NOTE: main function does not take any argument
 
+Functions can multiple return values in golang
+
+```go
+package main
+
+import "fmt"
+
+func swap(a,b string) (string,string) {
+  return b,a
+}
+
+func main() {
+  a, b := swap("Hello", "World")
+  fmt.Println(a,b)
+}
+```
+
+The following code is an example of "naked" return in golang where the return statement has no arguments and the two named variables values are returned
+
+```go
+package main
+
+import "fmt"
+
+func split(sum int) (x, y int) {
+	x = sum * 4 / 9
+	y = sum - x
+	return
+}
+
+func main() {
+	var a, b int=split(17)
+	fmt.Println(a,b)
+}
+```
