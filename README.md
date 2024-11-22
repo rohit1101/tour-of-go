@@ -182,3 +182,29 @@ func main() {
 ```
 
 ## Basic Types
+
+- `bool`
+- `string`
+- Signed Integer
+  - `int`
+  - `int8`
+  - `int16`
+  - `int32`
+  - `int64`
+- Unsigned Integer
+  - `uint`
+  - `uint8`
+  - `uint16`
+  - `uint32`
+  - `uint64`
+  - `uintptr`
+- `byte` //alias for uint8
+- `rune` // alias for int32
+- `float32`
+- `float64`
+- `complex64`
+- `complex128`
+
+NOTE: `int`, `uint` and `uintptr` consists 32 bits for 32-bit systems and 64 bits for 64-bit systems.
+
+
