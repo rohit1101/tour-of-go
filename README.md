@@ -243,7 +243,22 @@ func main() {
     b bool
     s string
   )
-  fmt.Printf("Values are %v %v %v and %v and their type is %T %T %T and %T \n", ToBe,z,myName,age,ToBe,z,myName,age)
+  fmt.Printf("Default values are: %v %v %v %q\n",i,f,b,s)
 }
-
 ```
+## Type conversions
+
+The syntax for type conversion is `T(v)` where `T` is the type and `v` is the value to be converted
+
+```go
+var i int = 42
+var f float64 = float64(i)
+var u uint = uint(f)
+
+// or 
+
+i := 42
+f := float64(i)
+u := uint(f)
+```
+
