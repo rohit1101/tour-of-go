@@ -207,4 +207,43 @@ func main() {
 
 NOTE: `int`, `uint` and `uintptr` consists 32 bits for 32-bit systems and 64 bits for 64-bit systems.
 
+Example:
 
+```go
+package main
+
+import (
+  "fmt"
+  "math/cmplx"
+)
+
+func main() {
+  var (
+    ToBe bool=false
+    z complex128=cmplx.Sqrt(2+3i)
+    myName string="Rohit"
+    age float64=25.5
+	)
+  fmt.Printf("Values are %v %v %v and %v and their type is %T %T %T and %T \n", ToBe,z,myName,age,ToBe,z,myName,age)
+  fmt.Printf("Lucky number is: %d!\n",randomNumber())
+}
+```
+
+Default values for variables that are only **declared** but not defined
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+  var (
+    i int
+    f float64
+    b bool
+    s string
+  )
+  fmt.Printf("Values are %v %v %v and %v and their type is %T %T %T and %T \n", ToBe,z,myName,age,ToBe,z,myName,age)
+}
+
+```
