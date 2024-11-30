@@ -261,4 +261,21 @@ i := 42
 f := float64(i)
 u := uint(f)
 ```
+## Type inference
 
+By default the type of the variable is set when we declare a variable like `var i int` but if we declare a variable with `:=` or `var i` syntax the type of the variable is same as the value defined on right hand side.
+
+```go
+var i int
+j:=i // here the variable j has the same type as i
+```
+
+But if the right hand side value of a variable is not typed then the type of the value depends on the value defined as shown below:
+
+```go
+i := 1
+f := 3.14
+g := 0.45 + 0.5i
+```
+
+```
